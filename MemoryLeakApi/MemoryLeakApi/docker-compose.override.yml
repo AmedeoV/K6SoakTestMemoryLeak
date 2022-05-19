@@ -1,0 +1,9 @@
+services:
+  memory-leak:
+    image: memoryleak
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "8080:8080"

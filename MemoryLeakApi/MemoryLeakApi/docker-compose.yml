@@ -1,0 +1,16 @@
+services:
+  memory-leak:
+    image: memoryleak
+    mem_limit: 512m
+  datadog-agent:
+    image: datadog/agent:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /proc/:/host/proc/:ro
+      - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
+    environment:
+      - DD_SITE=datadoghq.com
+      - DD_API_KEY=<Sensitive>
+      - DD_DOGSTATSD_NON_LOCAL_TRAFFIC=1
+    ports:
+      - "8125:8125/udp"
