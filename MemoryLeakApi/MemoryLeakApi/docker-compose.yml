@@ -1,7 +1,7 @@
 services:
   memory-leak:
     image: memoryleak
-    mem_limit: 512m
+    mem_limit: 2048m
   datadog-agent:
     image: datadog/agent:latest
     volumes:
