@@ -9,6 +9,7 @@ Typically with a normal load test, we send a bunch of requests for a short perio
 ## Example of Web API with a memory leak
 <!-- This API with a memory leak is taken from Microsoft Diagnostic examples... -->
 - Run load test for a short period returns 200 and we think that it's all good
+![LoadTest](https://github.com/AmedeoV/K6SoakTestMemoryLeak/blob/main/Resources/LoadTestGif.gif)
 - Show that by hitting the endpoint the GC Heap Size (MB) increases
 - Runs Soak Test
 
