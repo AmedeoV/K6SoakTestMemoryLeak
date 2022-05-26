@@ -16,9 +16,11 @@ Typically with a normal load test, we send a bunch of requests for a short perio
 ![GCHeapSize](/Resources/SoakTestVideo.gif)
 - Show errors
 
+> System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+
+
 ```C#
-{
-  fail: Microsoft.AspNetCore.Server.Kestrel[13]
+fail: Microsoft.AspNetCore.Server.Kestrel[13]
 
       Connection id "0HMHUTUB1JJR6", Request id "0HMHUTUB1JJR6:00000003": An unhandled exception was thrown by the application.
 
@@ -61,7 +63,6 @@ Typically with a normal load test, we send a bunch of requests for a short perio
          at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
 
          at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
-}
 ```
 
 ### Observations
