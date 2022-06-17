@@ -11,7 +11,8 @@ The following example has been taken from [Microsoft Diagnostic Samples](https:/
 
 Observe that by hitting the API Endpoint, the memory usage keeps growing (the GC Heap Size (MB) increases)
 
-[![GCHeapSize: 55](/Resources/GCHeapSize.gif)]([https://www.youtube.com/watch?v=Hc79sDi3f0U](https://user-images.githubusercontent.com/20638889/174278488-ae1e6d93-5819-4255-9a9a-0e85cbff44fa.mp4) "Now in Android: 55")
+https://user-images.githubusercontent.com/20638889/174279774-57b08147-fb59-4c3a-9b6b-2f72f227f94c.mp4
+
 
 
 - Run load test for a short period returns 200 and we think that it's all good
