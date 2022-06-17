@@ -15,11 +15,13 @@ https://user-images.githubusercontent.com/20638889/174279774-57b08147-fb59-4c3a-
 
 By running a conventional load test for a short period, it returns a 200 so we think that everything it's working as expected:
 
-![LoadTest](/Resources/LoadTestGif.gif?raw=true)
+https://user-images.githubusercontent.com/20638889/174282112-f3bace0e-8b92-4548-bbcb-1c98a333dde7.mp4
 
 However, when we run a Soak Test for a long period, we notice that some of the requests are failing:
 
-![GCHeapSize](/Resources/SoakTestVideo.gif?raw=true)
+https://user-images.githubusercontent.com/20638889/174282071-402ba300-32b2-4d12-9ba2-f933f95566e7.mp4
+
+
 
 Investigating the exceptions we can clearly see what's the issue here:
 
