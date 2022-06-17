@@ -11,7 +11,8 @@ The following example has been taken from [Microsoft Diagnostic Samples](https:/
 
 Observe that by hitting the API Endpoint, the memory usage keeps growing (the GC Heap Size (MB) increases)
 
-![GCHeapSize](/Resources/GCHeapSize.mp4)
+[![GCHeapSize](/Resources/GCHeapSize.gif)](/Resources/GCHeapSize.mp4)
+
 
 - Run load test for a short period returns 200 and we think that it's all good
 ![LoadTest](/Resources/LoadTestGif.gif?raw=true)
