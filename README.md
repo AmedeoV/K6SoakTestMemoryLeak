@@ -23,10 +23,12 @@ https://user-images.githubusercontent.com/20638889/174282071-402ba300-32b2-4d12-
 
 
 
-Investigating the exceptions we can clearly see what's the issue here:
+Investigating the exceptions we can see what's the issue here:
 
 > System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
 
+
+And this is the full stack trace:
 
 ```C#
 fail: Microsoft.AspNetCore.Server.Kestrel[13]
