@@ -7,13 +7,17 @@ A soak test it's like a load test that runs for an extended period.
 Typically with a normal load test, we send a bunch of requests for a short period and monitor how the platform performs. While this may be useful for most scenarios, the typical load test might miss some issues that would come up only when the system is stressed for a _long_ period. For example, during a major event, we might have a big amount of clients using our platform for hours and this might surface any problems related to memory leaks, logs filling up the disk space and so on...
 
 ## Example of Web API with a memory leak
-<!-- This API with a memory leak is taken from Microsoft Diagnostic examples... -->
+The following example has been taken from [Microsoft Diagnostic Samples](https://github.com/dotnet/samples/tree/main/core/diagnostics/DiagnosticScenarios) - This Web API will cause the target to leak memory (amount specified by {kb}).
+
+Observe that by hitting the API Endpoint, the memory usage keeps growing (the GC Heap Size (MB) increases)
+
+![GCHeapSize](/Resources/GCHeapSize.gif?raw=true)
+
 - Run load test for a short period returns 200 and we think that it's all good
-![LoadTest](/Resources/LoadTestGif.gif)
-- Show that by hitting the endpoint the GC Heap Size (MB) increases
-![GCHeapSize](/Resources/GCHeapSize.gif)
+![LoadTest](/Resources/LoadTestGif.gif?raw=true)
+
 - Runs Soak Test
-![GCHeapSize](/Resources/SoakTestVideo.gif)
+![GCHeapSize](/Resources/SoakTestVideo.gif?raw=true)
 - Show errors
 
 > System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
