@@ -13,14 +13,15 @@ Observe that by hitting the API Endpoint, the memory usage keeps growing (the GC
 
 https://user-images.githubusercontent.com/20638889/174279774-57b08147-fb59-4c3a-9b6b-2f72f227f94c.mp4
 
+By running a conventional load test for a short period, it returns a 200 so we think that everything it's working as expected:
 
-
-- Run load test for a short period returns 200 and we think that it's all good
 ![LoadTest](/Resources/LoadTestGif.gif?raw=true)
 
-- Runs Soak Test
+However, when we run a Soak Test for a long period, we notice that some of the requests are failing:
+
 ![GCHeapSize](/Resources/SoakTestVideo.gif?raw=true)
-- Show errors
+
+Investigating the exceptions we can clearly see what's the issue here:
 
 > System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
 
