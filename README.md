@@ -1,10 +1,10 @@
 # Soak Testing with K6
 
 ## What is Soak Testing
-A soak test it's like a load test that runs for an extended period.
+A soak test, it's like a load test that runs for an extended period.
 
 ## Why is useful
-Typically with a normal load test, we send a bunch of requests for a short period and monitor how the platform performs. While this may be useful for most scenarios, the typical load test might miss some issues that would come up only when the system is stressed for a _long_ period. For example, during a major event, we might have a big amount of clients using our platform for hours and this might surface any problems related to memory leaks, logs filling up the disk space and so on...
+Typically with a normal load test, we send a bunch of requests for a short period and monitor how the platform performs. While this may be useful for most scenarios, the typical load test might miss some issues that would come up only when the system is stressed for a _long_ period. For example, during a major event, we might have a lot of clients using our platform for hours and this might cause problems related to memory leaks, logs filling up the disk space and so on...
 
 ## Example of Web API with a memory leak
 The following example has been taken from [Microsoft Diagnostic Samples](https://github.com/dotnet/samples/tree/main/core/diagnostics/DiagnosticScenarios) - This Web API will cause the target to leak memory (amount specified by {kb}).
@@ -60,4 +60,8 @@ fail: Microsoft.AspNetCore.Server.Kestrel[13]
 ```
 
 ## Conclusion
-As we can see a conventional load test would have missed the issue (in this case a memory leak) - Keep in mind that this was just an example, in a real-world scenario you would want to run a soak test for several hours on a lower environment or even in production if your application can handle it, then set some alerts on whatever monitoring software you use and check out the results to narrow down and fix any issues.
+As we can see, a conventional load test would have missed the issue (in this case a memory leak) - keep in mind that this was just an example. 
+
+In a real-world scenario, you would want to run a soak test for several hours on a lower environment or even in production if your application can handle it. 
+
+Then set some alerts on whatever monitoring software you use and check out the results to narrow down and fix any issues.
