@@ -23,7 +23,7 @@ https://user-images.githubusercontent.com/20638889/174282071-402ba300-32b2-4d12-
 
 
 
-Investigating the exceptions we can see what's the issue here:
+Investigating the exceptions we can see what the issue is:
 
 > System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
 
@@ -59,8 +59,5 @@ fail: Microsoft.AspNetCore.Server.Kestrel[13]
          at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
 ```
 
-### Observations
-Show the results, some are returning 200, but most are failing
-
 ## Conclusion
-We just show how soak testing an application is useful
+As we can see a conventional load test would have missed the issue (in this case a memory leak) - Keep in mind that this was just an example, in a real-world scenario you would want to run a soak test for several hours on a lower environment or even in production if your application can handle it, then set some alerts on whatever monitoring software you use and check out the results to narrow down and fix any issues.
